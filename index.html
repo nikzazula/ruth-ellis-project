@@ -1,0 +1,68 @@
+<!--Nikolas Zazula-->
+<!--Portfolio Project (Mobile)-->
+<!--Rubric Link: https://docs.google.com/document/d/1yknx-OHYmd3HuwNWHsjVy-qXId5RAJaef6FSFNDoO9U/edit?usp=sharing-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Ruth Ellis Center</title>
+    <link rel="icon" type="image/x-icon" href="/images/welcome_logo_REC_-_PrimaryLogo_-_CMYK_-_Grey.png">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            }
+        });
+    });
+    </script>
+  </head>
+  <body>
+    <a class="skip-to-content-link" href="#page-title">
+      Skip to <br>content
+    </a>
+    <div id="nav-div">
+        <nav id="nav">
+            <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="image-gallery.html">IMAGES</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <main class="container">
+        <header id="main">
+            <div id="main-title-div">
+            <h1 id="main-title">RUTH ELLIS CENTER</h1>
+            </div>
+            <h1 id="page-title">HOME</h1>
+          </header>
+          <div id="body-flex-container">
+          <div id="about-div" class="index-div">
+              <h3 id="what-we-do" class="index-div-title">WHAT WE DO</h3>
+              <p class="index-div-text">Founded in 1999, Ruth Ellis Center (REC) has established a national reputation for quality and innovation in providing trauma-informed services for lesbian, gay, bi-attractional, transgender and questioning (LGBTQ+) youth and young adults.</p>
+          </div>
+          <div id="mission-div" class="index-div">
+              <h3 class="index-div-title">OUR MISSION</h3>
+                  <p class="index-div-text">It is our mission, to create opportunities with LGBTQ+ young people to build their vision for a positive future. Our vision is a world where LGBTQ+ young people are safe and supported no matter where they go.</p>
+          </div>
+          <a id="donate-link" href="https://ruthelliscenter.networkforgood.com/projects/105748-main-giving-page">
+          <div id="donate-div" class="index-div">
+              <h3 class="index-div-title">DONATE</h3>
+                  <p class="index-div-text">If you are interested providing a charitable donation to the Ruth Ellis Center, please click here!</p>
+          </div>
+        </a>
+          </div>
+  </main>
+    <footer>
+      <p id="footer-text">
+        &copy; Nikolas Zazula, 2021</p>
+    </footer>
+  </body>
+</html>

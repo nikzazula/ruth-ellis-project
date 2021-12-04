@@ -1,0 +1,72 @@
+<!--Nikolas Zazula-->
+<!--Portfolio Project (Mobile)-->
+<!--Rubric Link: https://docs.google.com/document/d/1yknx-OHYmd3HuwNWHsjVy-qXId5RAJaef6FSFNDoO9U/edit?usp=sharing-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Ruth Ellis Center</title>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            }
+        });
+    });
+    </script>
+  </head>
+  <body>
+    <a class="skip-to-content-link" href="#page-title">
+      Skip to <br>content
+    </a>
+    <div id="nav-div">
+        <nav id="nav">
+            <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="image-gallery.html">IMAGES</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="container">
+        <header id="main">
+            <div id="main-title-div">
+            <h1 id="main-title">RUTH ELLIS CENTER</h1>
+            </div>
+            <h1 id="page-title">ABOUT</h1>
+        </header>
+          <div id="body-flex-container">
+          <div id="about-div" class="index-div">
+              <h3 class="index-div-title">THE RUTH ELLIS CENTER</h3>
+              <p class="about-div-text">
+                The Ruth Ellis Center is a Detroit area social services agency that serves 
+                the needs of runaway, homeless and at-risk lesbian, gay, bisexual,
+                 and transgender (LGBT) youth. Among their services are a drop-in center,
+                  Street Outreach Program, foster home, and Health and Wellness Center.
+                   The center is named after Ruth Ellis in honor of her allowing her home to serve as a refuge for 
+                   African American gays and lesbians as early as the 1930s.
+              </p>
+            </div>
+          <div id="mission-div" class="index-div">
+              <h3 class="index-div-title">OUR HISTORY</h3>
+                <p class="about-div-text">
+                A group of community activists - including John Allen, Kofi Adoma, and Courtney Wilson
+                 - founded Ruth Ellis Center in 1999, the same year Ruth Ellis was celebrating her 100th birthday. 
+                 The founders chose to call the program the Ruth Ellis Center in recognition of all the youth Ellis had helped. In September 2000,
+                  a 101-year-old Ellis attended the grand opening of the center's first phase, a drop-in center for at-risk youth.
+                </p>
+            </div>
+          </div>
+  </main>
+    <footer>
+      <p id="footer-text">
+        &copy; Nikolas Zazula, 2021</p>
+    </footer>
+  </body>
+</html>
