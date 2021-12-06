@@ -25,6 +25,7 @@ transform: translateX(0%);
 }
 
 #main-title{
+color: #323232;
 padding-top: 50px;
 padding-bottom: 50px;
 padding-right: 20px;
@@ -62,6 +63,7 @@ text-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #nav{
+  z-index: 6;
   padding: 10px;
   background-color: #F7B0B0;
   position: relative;
@@ -74,6 +76,7 @@ text-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 #nav .active {
   color: #323232;
+  text-decoration: underline;
 }
 
 #navdiv{
@@ -112,10 +115,12 @@ text-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
 .index-div-title{
   text-align: center;
   font-size: 3vw;
+  color: #323232;
 
 }
 
 .index-div-text{
+  color: #323232;
   padding: 5px;
   margin: 10px;
   line-height: 3vw;
@@ -123,6 +128,7 @@ text-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .about-div-text{
+  color: #323232;
   padding: 5px;
   margin: 10px;
   line-height: 3vw;
@@ -194,6 +200,112 @@ text-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding-right: 10%;
 }
 
+#email-link{
+  text-decoration: none;
+  color: #323232;
+}
+#contact-flip-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 2%;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  margin-top: 10%;
+  background-color: transparent;
+  perspective: 1000px;
+}
+#contact-flip-card-inner{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 50vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  border-radius: 2%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* */
+#contact-flip-card:hover #contact-flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+#contact-flip-card-front, #contact-flip-card-back {
+  z-index: 5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+#contact-flip-card-front{
+  background-color:#F3B5B5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2%;
+}
+
+#contact-flip-card-back{
+  background-color:#F3B5B5;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2%;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+#form-div{
+  margin-top: 2vw;
+  width: 80%;
+}
+.form-label{
+  font-size: 2vw;
+  color: #323232;
+}
+input[type=text], select, textarea {
+  font-size: 2vw;
+  width: 100%; /* Full width */
+  padding: .05vw; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */ /* Add a top margin */
+  margin-top: 0.5vw;
+  margin-bottom: 10px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 1vw 2vw;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
+
 body{
 font-family: "Montserrat", sans-serif;
 background-color: #FDFFF2;
@@ -209,11 +321,13 @@ h1{
 font-size: 50px;
 line-height: 1;
 text-align: center;
+color: #323232;
 }
 
 h2{
 font-size: 32px;
 line-height: 1.5;
+color: #323232;
 }
 
 nav ul{
@@ -267,67 +381,49 @@ margin: 0;
 /* tablet view */
 @media (min-width: 750px)  { 
   .gallery {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    display: grid;
-    justify-content: center;
     grid-template-columns: repeat(2, 40vw);
     grid-template-rows: repeat(6, 40vw);
     gap: 3%;
-    width: 100%;
     height: auto;
   }
-  
-  .gallery__item{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: auto;
-    overflow: hidden;
-    border-top-left-radius: 2%;
-    border-top-right-radius: 2%;
-    border-bottom-left-radius: 2%;
-    border-bottom-right-radius: 2%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  }
-  
-  .gallery__img{
-    height: 100%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  }
-  
-  .img-div{
-    height: 90%;
-    width: auto;
-    overflow: hidden;
-  }
-  
-  #image-7{
-    width: 100%;
-    height: auto;
-  }
-  
- 
-  .img-caption{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    background-color: #F7B0B0;
-    text-align: center;
-    padding-top: 20px;
-    height: 10%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  }
-  
+
   .caption-text{
     margin-top: -2vw;
     font-size: 1.5vw;
-    padding-left: 10%;
-    padding-right: 10%;
   }
+}
 
+/* desktop view */
+@media (min-width: 1024px)  { 
+  .gallery {
+    grid-template-columns: repeat(3, 25vw);
+    grid-template-rows: repeat(3, 30vw);
+    gap: 3%;
+    height: auto;
+  }
+  .caption-text{
+    margin-top: -2vw;
+    font-size: 1vw;
+  }
+  
+}
 
-
+@media (prefers-reduced-motion) {
+  .grow:hover {
+    transform: none;
+  }
+  #contact-flip-card:hover #contact-flip-card-inner {
+    transform: none;
+  }
+  body{
+    background-attachment: scroll;
+    }
+  #contact-flip-card-front{
+    display: none;
+    }
+  #contact-flip-card-front, #contact-flip-card-back {
+    -webkit-backface-visibility: visible; /* Safari */
+    backface-visibility: visible;
+    transform: scaleX(1);
+    }
 }

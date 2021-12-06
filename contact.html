@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Ruth Ellis Center</title>
+    <script type="text/javascript" src="js/portfolio.js"></script>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
     $(function(){
@@ -42,19 +43,51 @@
             <h1 id="page-title">CONTACT</h1>
           </header>
           <div id="body-flex-container">
-          <div id="about-div" class="index-div">
+          <div id="contact-flip-card" >
+          <div id="contact-flip-card-inner" >
+          <div id="contact-flip-card-front" >
               <h3 class="index-div-title">CONTACT RUTH ELLIS</h3>
               <p class="index-div-text">
             77 Victor Street<br>
             Highland Park, MI 48203<br>
             313-252-1950<br>
-            info@ruthelliscenter.org<br>
+            <a id="email-link" href = "mailto: info@ruthelliscenter.org">info@ruthelliscenter.org</a><br>
               </p>
             </div>
+            <div id="contact-flip-card-back" >
+              <h3 class="index-div-title">CONTACT RUTH ELLIS</h3>
+              <div id="form-div">
+              <form method="post" action="action_page.php">
+
+                <label class="form-label" for="fname">First Name</label>
+                <input class="form-input" type="text" id="fname" name="firstname" placeholder="Your name..">
+            
+                <label class="form-label" for="lname">Last Name</label>
+                <input class="form-input" type="text" id="lname" name="lastname" placeholder="Your last name..">
+            
+                <label class="form-label" for="lname">Email</label>
+                <input class="form-input" type="text" id="email" name="email" placeholder="Your email..">
+            
+                <label class="form-label" for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write something.." style="height:3vw"></textarea>
+            
+                <input type="submit" value="Submit">
+            
+              </form>
+            </div>
+            </div>
+          </div>
+        </div>
+
+
+
           <a id="donate-link" href="https://ruthelliscenter.networkforgood.com/projects/105748-main-giving-page">
           <div id="donate-div" class="index-div">
               <h3 class="index-div-title">DONATE</h3>
                   <p class="index-div-text">If you are interested providing a charitable donation to the Ruth Ellis Center, please click here!</p>
+                  <form class="grow" action="https://ruthelliscenter.networkforgood.com/projects/105748-main-giving-page">
+                    <input type="submit" value="DONATE" />
+                </form>
           </div>
         </a>
           </div>
